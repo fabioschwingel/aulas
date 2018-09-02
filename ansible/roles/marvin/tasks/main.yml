@@ -1,0 +1,11 @@
+---
+# tasks file for marvin
+- name: Garantindo estrutura WEB
+  hosts: all
+  vars:
+  - texto: "Hoje é domingo"
+  tasks:
+  - include: prerequisitos.yml
+  - include: install_apache.yml
+  - include: install_httpd.yml
+  - include: deploy.yml
